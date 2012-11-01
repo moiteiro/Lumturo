@@ -45,7 +45,7 @@ if(OPERATIONAL_MODE == 'production'){
 
 	$route_app->generate($route_apps);
 	$route_app->generate_xml();
-	$route_app->export_as_menu();
+	//$route_app->export_as_menu();
 }
 
 
