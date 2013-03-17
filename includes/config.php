@@ -6,19 +6,18 @@
  */
 
 
-$op_mode = 'development';
-
-#$op_mode = 'production';
+#$op_mode = 'development';
+$op_mode = 'production';
 
 // verificando se o servidor eh local
-$local 		= $_SERVER['SERVER_ADDR'] == "127.0.0.1" ? true : false ;
+$local 		= $_SERVER['SERVER_ADDR'] == "127.0.0.1" ? true : false;
 
 //						-------LOCAL-------	: -------SERVER-------		
-$host		= $local ? "localhost"						: "";
-$db			= $local ? "test"							: "";
-$user		= $local ? "root"							: "";
-$pass		= $local ? ""								: "";
-$website	= $local ? "http://framework"				: "";	
+$host		= $local ? "localhost"						: "mysql.brunomoiteiro.com";
+$db			= $local ? "projetos_lumturo"				: "projetos_lumturo";
+$user		= $local ? "root"							: "moiteiro";
+$pass		= $local ? ""								: "br201087";
+$website	= $local ? "http://webservice.lumturo"		: "http://lumturo.brunomoiteiro.com";	
 
 	
 // Define uma camada de seguraça

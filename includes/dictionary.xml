@@ -4,4 +4,8 @@
 		<single>example</single>
 		<plural>examples</plural>
 	</word>
+	<word>
+		<single>city</single>
+		<plural>cities</plural>
+	</word>
 </words>

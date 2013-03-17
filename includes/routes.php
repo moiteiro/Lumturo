@@ -1,16 +1,78 @@
 <?php 
 
+/*
+  <route>
+    <url>/^\/inicialization\/state\/(?P&lt;state_id&gt;\d+)\/city\/(?P&lt;city_name&gt;[\w\-]+)\/?$/</url>
+    <controller>inicialization</controller>
+    <view>index</view>
+  </route>
+
+  <route>
+    <url>/^\/search\/city\/(?P&lt;city_id&gt;\d+)\/q\/(?P&lt;search_string&gt;[\w\-]+)\/?$/</url>
+    <controller>search</controller>
+    <view>index</view>
+  </route>
+
+  <route>
+    <url>/^\/search\/city\/(?P&lt;city_id&gt;\d+)\/neighborhood\/(?P&lt;neighborhood_id&gt;\d+)\/q\/(?P&lt;search_string&gt;[\w\-]+)\/?$/</url>
+    <controller>search</controller>
+    <view>index</view>
+  </route>
+
+*/
+
 $route_apps = array(
-                "dashboard",
-                "dashboard/users",
-                "session" => array( "remove" => array( "index", "new", "edit", "alter", "show" )),
-                "modules",
-                "modules/portfolios",
-                "modules/portfolios:id/portfolio_images" ,
-                "modules/employees",
+                //"inicialization/state:id/city:name(string)/",
+                "cities",
+                "cities:id/locations", //retorna todos os locais da cidade. 
+                // nao foi configurado de modo cities:id/headquarters/location/ para dar ao sistema maior 
+                // flexibilidade caso seja cadastro outro tipo local que nao seja uma empresa
+
+                "cities:id/neighborhoods", // retorna todos os bairros de uma cidade.
+                "cities:id/neighborhoods:id/locations", // retorna todos os locais de um bairro.
+
+                "cities:id/enterprises", // retorna todas as empresas de uma cidade.
+
+                "neighborhoods", // retorna todos os bairros de todas as cidades.
+
+                "enterprises_types",
+                "enterprises_types/enterprises_subtypes", // retorna todos tipos e seus respectivos subtipos.
+                "enterprises_types:id/enterprises_subtypes", // retorna todos os subtipos de um tipo.
+
+                "enterprises_subtypes", // retorna todos tipos e seus respectivos subtipos.
+
+                "cities:id/enterprises_types:id/locations", // retorna todos os locais de um determinado tipo de um bairro.
+                "cities:id/enterprises_subtypes:id/locations", // retorna todos os locais de um determinado subtipo de um bairro.
+
+                //"cities:id/enterprises_types:id/enterprises_headquarters:name(string)/locations", // retorna todos os locais de um determinado tipo de um bairro.
+                //"cities:id/enterprises_subtypes:id/enterprises_headquarters:name(string)/locations", // retorna todos os locais de um determinado subtipo de um bairro.
+
+                "cities:id/neighborhoods:id/enterprises_types:id/locations", // retorna todos os locais de um determinado tipo de um bairro.
+                "cities:id/neighborhoods:id/enterprises_subtypes:id/locations", // retorna todos os locais de um determinado subtipo de um bairro.
+
+                //"cities:id/neighborhoods:id/enterprises_types:id/enterprises_headquarters:name(string)/locations", // retorna todos os locais de um determinado tipo de um bairro.
+                //"cities:id/neighborhoods:id/enterprises_subtypes:id/enterprises_headquarters:name(string)/locations", // retorna todos os locais de um determinado subtipo de um bairro.
+
+
+                "enterprises", // retorna todas as empresas.
+                "enterprises:id/enterprises_headquarters", // retorna todas as sedes de uma empresa
+
+                "enterprises_headquarters", // warning! retorna todos os dados de todas as sedes.
+
+                "states", // retorna a lista de todos os estados cadastrados.
+
+
+                "search/city:id/q:name(string)", //lista todos os estabelecimentos de um local a partir de uma string
+
+                //"search",
+                //"search/cities:id/", // lista tudo de uma cidade em especifico
+                //"search/cities:id/neigborhood/", // lista todos os bairros
+                //"search/cities:id/neigborhood:id/", // lista tudo de um bairro em especifico
+
+                //"maps", // retorna todo o mapa que o sistema cobrir
+                //"maps/cities:id/", // retorna o mapa completo de uma cidade
+                //"maps/cities:id/neigborhood:id/", // retorna o mapa completo de um bairro
                 );
-
-
 /**
  * As rotas do sistema devem ser definidas nesse arquivo.
  * Rotas possuem formato padrão, onde cada módulo definido mais acima conterá oito ações (index, list, show, new

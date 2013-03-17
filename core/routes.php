@@ -379,7 +379,6 @@ class Route extends File{
 					$word = substr( $word, 0, $word_type_start );
 				}
 
-
 				// definindo o tipo da variavel.
 				switch( $word_type ){
 					case "integer":
@@ -393,9 +392,9 @@ class Route extends File{
 
 				$pattern_sample = str_replace( "\word_type", $default_type_sample, $pattern_sample );
 
-
 				// colocando um prefixo na variavel usando a palavra anterior.
 				$previous_word = substr($route, 0, $start);
+
 				
 				$before_previous_word = strrpos($previous_word, "/");
 				if($before_previous_word !== false){

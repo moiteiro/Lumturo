@@ -5,19 +5,18 @@ defined('_PREVENT-DIRECT-ACCESS') or die ("Access restrict");
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
     <head>
-    
-    	
-        <title>Framework</title>
+        <title>Webservice - Lumturo</title>
+
+        <meta charset='utf-8' />
         
-        <meta name="author" content="Bruno Moiteiro">
+        <meta name="author" content="Bruno Moiteiro" />
         <meta http-equiv="content-language" content="pt-br">
         
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="" /> 
-        <meta name="keywords" content="Framework" /> 
+        <meta name="keywords" content="" /> 
         
         <!--Com essa tag nada será indexado-->
         <meta name="robots" content="noindex,nofollow">
@@ -26,9 +25,27 @@ defined('_PREVENT-DIRECT-ACCESS') or die ("Access restrict");
         <link href="<?php echo WEBSITE ?>/design/stylesheets/style.css" rel="stylesheet" type="text/css" />
         
         
+        <link rel="stylesheet" href="design/stylesheets/documenter_style.css" media="all">
+        <script src="/scripts/jquery-1.6.2.min.js"></script>
+        <script src="/scripts/jquery.scrollTo-1.4.2-min.js"></script>
+        <script src="/scripts/jquery.easing.js"></script>
+        <style>
+            html{background-color:#EEEEEE;color:#383838;}
+            ::-moz-selection{background:#333636;color:#00DFFC;}
+            ::selection{background:#333636;color:#00DFFC;}
+            #documenter_sidebar #documenter_logo{background-image:url();}
+            a{color:#008C9E;}
+            strong{letter-spacing: 0.8px }
+            hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+            #documenter_sidebar, #documenter_sidebar ol a{background-color:#343838;color:#FFFFFF;}
+            #documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+            #documenter_sidebar ol{border-top:1px solid #212424;}
+            #documenter_sidebar ol a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+            #documenter_sidebar ol a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+            #documenter_sidebar ol a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+            #documenter_copyright{display:block !important;visibility:visible !important;}
+        </style>
         <!--Scripts-->
-		<script type='text/javascript' src='<?php echo WEBSITE ?>/scripts/jquery.js'></script>
-        
         
     </head>
     

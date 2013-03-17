@@ -18,8 +18,8 @@ require_once('core_functions.php');
 /* ==========================
 	System Definitions
 ============================*/
-set_exception_handler('dflt_exception_handler');
-set_error_handler('dflt_error_handler');
+//set_exception_handler('dflt_exception_handler');
+//set_error_handler('dflt_error_handler');
 
 /* ============
 	Configs

@@ -219,13 +219,18 @@ class DatabaseObject {
 	* @access public
 	* @return integer
 	*/
-	public function get_total_amount(){
+	public static function get_total_amount(){
 		global $database;
 
 		$query = "SELECT COUNT(id) as total FROM ".static::$table_name;
 		$result_set = $database->query($query);
 		$result_array  = $database->result_to_array($result_set);
-		return !empty($result_array) ? array_shift(array_shift($result_array)) : 0;
+		
+		if(!empty($result_array)){
+			$result_array = array_shift($result_array);
+			return array_shift($result_array);
+		}
+		return 0;
 
 	}
 
@@ -269,7 +274,7 @@ class DatabaseObject {
 	* @access public
 	* @return array
 	*/
-	public function get_attributes_type(){
+	public static function get_attributes_type(){
 		
 		return static::$db_fields;
 		

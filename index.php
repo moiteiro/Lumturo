@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(2);
 require_once('core/init.php');
 
 $url         = $_SERVER['REQUEST_URI'];
@@ -29,8 +29,10 @@ if($route_app->check_url($url,$matches)){
 
 	} catch(Exception $e){
 		
+		echo $e;
 		// tratar os erros aqui
 	}
+
 }
 
 unset($_SESSION['flash']['notice']);
@@ -43,5 +45,4 @@ if (!$match_found){
 }
 
 unset($database);
-
 ?>

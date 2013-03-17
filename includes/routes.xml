@@ -1,258 +1,748 @@
 <?xml version="1.0"?>
 <routes>
+
   <route>
-    <url>/^\/dashboard\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/inicialization\/state\/(?P&lt;state_id&gt;\d+)\/city\/(?P&lt;city_name&gt;[\w\-\+]+)\/?$/</url>
+    <controller>inicialization</controller>
+    <view>index</view>
+  </route>
+
+  <route>
+    <url>/^\/search\/city\/(?P&lt;city_id&gt;\d+)\/q\/(?P&lt;page&gt;\d+)\/(?P&lt;qty&gt;\d+)\/(?P&lt;search_string&gt;[\w\-\+]+)\/?$/</url>
+    <controller>search</controller>
+    <view>index</view>
+  </route>
+
+  <route>
+    <url>/^\/search\/city\/(?P&lt;city_id&gt;\d+)\/q\/(?P&lt;search_string&gt;[\w\-\+]+)\/?$/</url>
+    <controller>search</controller>
+    <view>index</view>
+  </route>
+
+  <route>
+    <url>/^\/search\/city\/(?P&lt;city_id&gt;\d+)\/neighborhood\/(?P&lt;neighborhood_id&gt;\d+)\/q\/(?P&lt;page&gt;\d+)\/(?P&lt;qty&gt;\d+)\/(?P&lt;search_string&gt;[\w\-]+)\/?$/</url>
+    <controller>search</controller>
+    <view>index</view>
+  </route>
+
+  <route>
+    <url>/^\/cities\/?$/</url>
+    <controller>cities</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/dashboard\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>cities</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/dashboard\/new\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/new\/?$/</url>
+    <controller>cities</controller>
     <view>new</view>
   </route>
   <route>
-    <url>/^\/dashboard\/create\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/create\/?$/</url>
+    <controller>cities</controller>
     <view>create</view>
   </route>
   <route>
-    <url>/^\/dashboard\/(?P&lt;id&gt;\d+)$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>cities</controller>
     <view>show</view>
   </route>
   <route>
-    <url>/^\/dashboard\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>cities</controller>
     <view>edit</view>
   </route>
   <route>
-    <url>/^\/dashboard\/alter\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/alter\/?$/</url>
+    <controller>cities</controller>
     <view>alter</view>
   </route>
   <route>
-    <url>/^\/dashboard\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>dashboard</controller>
+    <url>/^\/cities\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>cities</controller>
     <view>delete</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/?$/</url>
+    <controller>locations</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>locations</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/new\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/new\/?$/</url>
+    <controller>locations</controller>
     <view>new</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/create\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/create\/?$/</url>
+    <controller>locations</controller>
     <view>create</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/(?P&lt;id&gt;\d+)$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>locations</controller>
     <view>show</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>locations</controller>
     <view>edit</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/alter\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/alter\/?$/</url>
+    <controller>locations</controller>
     <view>alter</view>
   </route>
   <route>
-    <url>/^\/dashboard\/users\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>users</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>locations</controller>
     <view>delete</view>
   </route>
   <route>
-    <url>/^\/session\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>session</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/session\/create\/?$/</url>
-    <controller>session</controller>
-    <view>create</view>
-  </route>
-  <route>
-    <url>/^\/session\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>session</controller>
-    <view>delete</view>
-  </route>
-  <route>
-    <url>/^\/modules\/?$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>modules</controller>
-    <view>index</view>
-  </route>
-  <route>
-    <url>/^\/modules\/new\/?$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/new\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>new</view>
   </route>
   <route>
-    <url>/^\/modules\/create\/?$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/create\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>create</view>
   </route>
   <route>
-    <url>/^\/modules\/(?P&lt;id&gt;\d+)$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>neighborhoods</controller>
     <view>show</view>
   </route>
   <route>
-    <url>/^\/modules\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>edit</view>
   </route>
   <route>
-    <url>/^\/modules\/alter\/?$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/alter\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>alter</view>
   </route>
   <route>
-    <url>/^\/modules\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>modules</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>delete</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/?$/</url>
+    <controller>locations</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>locations</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/new\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/new\/?$/</url>
+    <controller>locations</controller>
     <view>new</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/create\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/create\/?$/</url>
+    <controller>locations</controller>
     <view>create</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;id&gt;\d+)$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>locations</controller>
     <view>show</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>locations</controller>
     <view>edit</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/alter\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/alter\/?$/</url>
+    <controller>locations</controller>
     <view>alter</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>portfolios</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>locations</controller>
     <view>delete</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/?$/</url>
+    <controller>enterprises</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/new\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/new\/?$/</url>
+    <controller>enterprises</controller>
     <view>new</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/create\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/create\/?$/</url>
+    <controller>enterprises</controller>
     <view>create</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/(?P&lt;id&gt;\d+)$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises</controller>
     <view>show</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises</controller>
     <view>edit</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/alter\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/alter\/?$/</url>
+    <controller>enterprises</controller>
     <view>alter</view>
   </route>
   <route>
-    <url>/^\/modules\/portfolios\/(?P&lt;portfolio_id&gt;\d+)\/portfolio_images\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>portfolio_images</controller>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises</controller>
     <view>delete</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>index</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/new\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/new\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>new</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/create\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/create\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>create</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/(?P&lt;id&gt;\d+)$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>neighborhoods</controller>
     <view>show</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>edit</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/alter\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/alter\/?$/</url>
+    <controller>neighborhoods</controller>
     <view>alter</view>
   </route>
   <route>
-    <url>/^\/modules\/employees\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
-    <controller>employees</controller>
+    <url>/^\/neighborhoods\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>neighborhoods</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/new\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/create\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises_types</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/alter\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises_types</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/new\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/create\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/alter\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/enterprises_subtypes\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/new\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/create\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/alter\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/new\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/create\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/alter\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_subtypes\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises_subtypes</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/new\/?$/</url>
+    <controller>locations</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/create\/?$/</url>
+    <controller>locations</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>locations</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>locations</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/alter\/?$/</url>
+    <controller>locations</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>locations</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/new\/?$/</url>
+    <controller>locations</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/create\/?$/</url>
+    <controller>locations</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>locations</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>locations</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/alter\/?$/</url>
+    <controller>locations</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>locations</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/new\/?$/</url>
+    <controller>locations</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/create\/?$/</url>
+    <controller>locations</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>locations</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>locations</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/alter\/?$/</url>
+    <controller>locations</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_types\/(?P&lt;enterprises_type_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>locations</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>locations</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/new\/?$/</url>
+    <controller>locations</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/create\/?$/</url>
+    <controller>locations</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>locations</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>locations</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/alter\/?$/</url>
+    <controller>locations</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/cities\/(?P&lt;city_id&gt;\d+)\/neighborhoods\/(?P&lt;neighborhood_id&gt;\d+)\/enterprises_subtypes\/(?P&lt;enterprises_subtype_id&gt;\d+)\/locations\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>locations</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/?$/</url>
+    <controller>enterprises</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/new\/?$/</url>
+    <controller>enterprises</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/create\/?$/</url>
+    <controller>enterprises</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/alter\/?$/</url>
+    <controller>enterprises</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/new\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/create\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/alter\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises\/(?P&lt;enterprise_id&gt;\d+)\/enterprises_headquarters\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/new\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/create\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/alter\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/enterprises_headquarters\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>enterprises_headquarters</controller>
+    <view>delete</view>
+  </route>
+  <route>
+    <url>/^\/states\/?$/</url>
+    <controller>states</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/states\/list\/(?P&lt;page&gt;\d+)\/?$/</url>
+    <controller>states</controller>
+    <view>index</view>
+  </route>
+  <route>
+    <url>/^\/states\/new\/?$/</url>
+    <controller>states</controller>
+    <view>new</view>
+  </route>
+  <route>
+    <url>/^\/states\/create\/?$/</url>
+    <controller>states</controller>
+    <view>create</view>
+  </route>
+  <route>
+    <url>/^\/states\/(?P&lt;id&gt;\d+)$/</url>
+    <controller>states</controller>
+    <view>show</view>
+  </route>
+  <route>
+    <url>/^\/states\/(?P&lt;id&gt;\d+)\/edit\/?$/</url>
+    <controller>states</controller>
+    <view>edit</view>
+  </route>
+  <route>
+    <url>/^\/states\/alter\/?$/</url>
+    <controller>states</controller>
+    <view>alter</view>
+  </route>
+  <route>
+    <url>/^\/states\/(?P&lt;id&gt;\d+)\/delete\/?$/</url>
+    <controller>states</controller>
     <view>delete</view>
   </route>
   <route>
