@@ -1,0 +1,3 @@
+tests/BDD/bin/*
+tests/BDD/vendor/*
+tests/BDD/composer.lock
